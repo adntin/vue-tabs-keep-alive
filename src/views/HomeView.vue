@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import { Button } from 'ant-design-vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <h1>首页</h1>
+    <Button type="primary">Ant Button</Button>
   </main>
 </template>

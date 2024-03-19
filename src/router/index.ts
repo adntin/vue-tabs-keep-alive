@@ -12,13 +12,25 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      meta: {
-        keep: true
-      },
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/FormView/:id',
+      name: 'FormView',
+      meta: {
+        keepalive: true
+      },
+      component: () => import('../views/FormView.vue')
+    },
+    {
+      path: '/IframeView',
+      name: 'IframeView',
+      component: () => import('../views/IframeView.vue')
+    },
+    {
+      path: '/:notFound(.*)*',
+      name: 'NotFound',
+      component: () => import('../views/NotFoundView.vue')
     }
   ]
 })

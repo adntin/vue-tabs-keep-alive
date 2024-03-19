@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { Input } from 'ant-design-vue'
+import { useRouter } from 'vue-router'
+import { Button } from 'ant-design-vue'
+const router = useRouter()
 </script>
 
 <template>
   <h1>关于我们</h1>
-  <Input placeholder="请输入名称" />
-  <iframe src="https://www.leedarson.com/" width="500" height="500"></iframe>
+  <Button type="primary" @click="router.replace('/')">Go Home Page</Button>
 </template>
